@@ -38,11 +38,10 @@ character.changeIsAdult = !changeIsAdult;
 // - Add a new key with the name stored in variable `keyName` defined below i.e `playedBy` (use [] for computed property) and the value of "Maisie Williams"
 
 let keyName = 'playedBy';
-character[playedBy] = "Maisie Williams";
+character[keyName] = "Maisie Williams";
 
 // - Using `alert` alert the value stored in key you added above `keyName` use the variable name to access
-keyName = character["playedBy"];
-alert(keyName)
+alert(character[keyName]);
 
 // - Using the function `console.log` log the value of the key `42`. You don't have to add the key
 console.log(character[42]);
