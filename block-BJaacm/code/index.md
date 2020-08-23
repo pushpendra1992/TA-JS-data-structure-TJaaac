@@ -18,18 +18,18 @@ let newUser = user;
 
 2. Answer the following with reason:
 
-- `user == newUser;` // output and reason
-- `user === newUser;`
-- `user.name === newUser.name;`
-- `user.name == newUser.name;`
-- `user.sibling == newUser.sibling;`
-- `user.sibling === newUser.sibling;`
-- `user.sibling == allBrothers;`
-- `user.sibling === allBrothers;`
-- `brothersCopy === allBrothers;`
-- `brothersCopy == allBrothers;`
-- `brothersCopy == user.sibling;`
-- `brothersCopy === user.sibling;`
-- `brothersCopy[0] === user.sibling[0];`
-- `brothersCopy[1] === user.sibling[1];`
-- `user.sibling[1] === newUser.sibling[1];`
+- `user == newUser;` // true // holds same reference/address 
+- `user === newUser;` // true // holds same reference/address 
+- `user.name === newUser.name;` //true // holds same reference/address 
+- `user.name == newUser.name;` //true // holds same reference/address 
+- `user.sibling == newUser.sibling;` //true // holds same reference/address 
+- `user.sibling === newUser.sibling;` //true // holds same reference/address 
+- `user.sibling == allBrothers;` // false // reference/address are differenrt
+- `user.sibling === allBrothers;` // false // reference/address are differenrt
+- `brothersCopy === allBrothers;` // false // reference/address are differenrt
+- `brothersCopy == allBrothers;` // false // reference/address are differenrt
+- `brothersCopy == user.sibling;` // true // holds same reference/address 
+- `brothersCopy === user.sibling;` // true // holds same reference/address 
+- `brothersCopy[0] === user.sibling[0];` // true // holds same reference/address 
+- `brothersCopy[1] === user.sibling[1];` //true // holds same reference/address 
+- `user.sibling[1] === newUser.sibling[1];` // true // holds same reference/address 
