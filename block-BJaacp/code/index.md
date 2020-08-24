@@ -11,15 +11,15 @@ let arr2 = arr;
 
 Answer the following with reason after going through the above code:
 
-- `[10] === [10]`
-- What is the value of obj? // answer
-- `obj == newObj`
-- `obj === newObj`
-- `user === newObj`
-- `user == newObj`
-- `user == obj`
-- `arr == arr1`
-- `arr === arr1`
+- `[10] === [10]` // false, Both array holds different references and array(obj) compare by its address not by value.
+- What is the value of obj? // {surname:: 'Stark'}, Because it reassign the reference.
+- `obj == newObj` // false, References are different
+- `obj === newObj` // false
+- `user === newObj`// false, Both array holds different references
+- `user == newObj`// false
+- `user == obj`// true ,Both array holds same references
+- `arr == arr1` //error, arr1 is not defined.
+- `arr === arr1` // error, arr1 is not defined.
 
 2. What's will be the value of `person1` and `person2` ? Explain with reason. Draw the memory representation diagram.
 
@@ -33,8 +33,8 @@ function personDetails(person) {
 }
 var person1 = { name: 'Alex', age: 30 };
 var person2 = personDetails(person1);
-console.log(person1);
-console.log(person2);
+console.log(person1); //{name: 'Alex', age: 30}
+console.log(person2); // {name: 'john', age: 50}
 ```
 
 3. What will be the output of the below code:
@@ -46,6 +46,6 @@ var user = {
 };
 user.brothers = brothers;
 brothers.push('Robb');
-console.log(user.brothers === brothers); //1. output
-console.log(brothers.length === brothers.length); //2. output
+console.log(user.brothers === brothers); //1. true
+console.log(brothers.length === brothers.length); //2. true
 ```
